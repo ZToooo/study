@@ -224,9 +224,10 @@
 }
 
 .new_box{
-	height: 200px;
+	height: 150px;
 	width: 90%;
 	margin:0 auto;
+	padding-top:10px;
 }
 .new_title{
 	height: 52px;

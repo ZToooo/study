@@ -1,10 +1,8 @@
 $(document).ready(function(){
 	/*克隆添加html*/
-	function scrillside(){
-		var box=$(window).height();
-		console.log(box);
-	}
-	
+	newBOx();
+		
+
 	/*点击按钮给a标签修改属性值*/
 	$("a.nav_box").click(function(){
 		$("a.nav_box").attr("id","");
@@ -13,3 +11,20 @@ $(document).ready(function(){
 	
 
 });
+
+	function newBOx(){
+		var $lists=$(".middle_box");
+		/*先清空，再加载 */
+		//$($lists).empty();
+		var $list=$("<div></div>").addClass("new_box").prependTo($lists);
+		var $title=$("<div></div>").addClass("new_title").appendTo($list);
+		var $pic=$("<div></div>").addClass("new_pic").appendTo($list);
+		var $p1=$("<div></div>").addClass("p1").appendTo($pic);
+		var $p2=$("<div></div>").addClass("p2").appendTo($pic);
+		var $p3=$("<div></div>").addClass("p3").appendTo($pic);
+		var $inscribe=$("<div></div>").addClass("new_Inscribe").appendTo($list);
+		var $inscribe_title=$("<div></div>").addClass("new_Inscribe_info title").appendTo($inscribe);
+		var $inscribe_time=$("<div></div>").addClass("new_Inscribe_info time").appendTo($inscribe);
+		var $line=$("<div></div>").addClass("new_line").appendTo($list);
+
+	}
