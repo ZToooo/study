@@ -45,7 +45,7 @@
 }
 #baidu_select{
 	height: 44px;
-	width:80%;
+	width:99%;
 	margin:0 auto;
 	margin-top:20px;
 	border:1px solid black;
@@ -60,7 +60,7 @@
 }
 #select_btn{
 	height: 43px;
-	width:33%;
+	width:32%;
 	margin-left:-5px;
 	font-size:15px;
 	color:#38f;
@@ -191,7 +191,7 @@
 	border:1px solid #38f;
 	border-radius:40px;
 	height: 32px;
-	width:72px;
+	width:75px;
 	text-align: center;
 	line-height: 32px;
 	margin-top: 7px;
@@ -275,3 +275,40 @@
 	height: 1px;
 	border-top:1px solid #eae6e6;
 }
+
+/*打开后台*/
+.news_admin,.news_pic{
+	height: 100%;
+	width: 320px;
+	font-family: "微软雅黑";
+}
+
+.news_box>div{
+	margin-top:10px;
+}
+
+#news_text{
+	height: 100px;
+
+.news_pic{
+	width: 244px;
+	height: 70px;
+}
+#load_file{
+	width:70px;
+}
+#p1,#p2,#p3{
+	width:53px ;
+	height: 53px;
+	float:right;
+}
+#subload,#onload{
+	display: block;
+	width: 158px;
+	height: 45px;
+	border:0;
+	margin-top:57px;
+	margin:0 auto;
+	
+}
+

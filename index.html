@@ -4,11 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title></title>
-    
-        <!--函数库-->
+    <!--函数库-->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/baidu.js"></script>
-    
     <!--样式库-->
     <link rel="stylesheet" type="text/css" href="css/baidu.css"/>
 </head>
@@ -96,7 +94,7 @@
 				<div id="app_logo">
 					<div id="logo_pic"></div>
 					<div id="logo_text">百度App</div>
-					<div id="logo_open">打开</div>
+					<div id="logo_open">打开后台</div>
 				</div>
 				<div id="app_text">热点事件早知道，语言搜索更高效！</div>
 				<div id="app_close"></div>
@@ -117,6 +115,27 @@
 					<div class="new_line"></div>
 				</div>-->
 			</div>
+			<div class="news_box">
+					<div class="news_title">
+						新闻标题：
+						<input type="text" name="news_title" id="news_title" value="" />
+					</div>
+					<div class="news_text">
+						新闻内容：
+						<input type="text" name="news_text" id="news_text" value="" />
+					</div>
+					<div class="news_pic">
+						<div id="pic_box">
+							<img id="p1" src=""/>
+							<img id="p2" src=""/>
+							<img id="p3" src=""/>
+						</div>
+						<input type="file" name="load_file" id="load_file" value="" style="color:transparent"/>
+					</div>
+					<div id="subload">
+						<input type="submit" name="onload" id="onload" value="确定" />
+					</div>
+				</div>
 		</div>
 	</div>
 </body>
