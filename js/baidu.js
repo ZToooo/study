@@ -7,6 +7,17 @@ $(document).ready(function(){
 	$("a.nav_box").click(function(){
 		$("a.nav_box").attr("id","");
 		$(this).attr("id","select");
+		
+		/*添加ajax请求*/
+		$.ajax({
+			type:"POST",
+			url:"../server/baidu.py",
+			dataType:"json",
+			data:{
+				"id":$(this).find('i').attr('id')
+			},
+			async:true
+		});
 	});
 	
 
