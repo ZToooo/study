@@ -1,7 +1,8 @@
 $(document).ready(function(){
 		/*点击打开后台切换页面*/
 	$("#logo_open").click(function(){
-		$(".middle_box").find("iframe").attr("src","/server/baidu_houtai.html");
+		$(".middle_box").css("display","none");
+		$(".news_box").css("display","block");
 	});
 	
 	/*克隆添加html*/

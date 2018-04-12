@@ -221,6 +221,7 @@
 	background-color:white;
 	margin:0 auto;
 	font-size:17px;
+	display:block;
 }
 
 .new_box{
@@ -282,7 +283,14 @@
 	width: 320px;
 	font-family: "微软雅黑";
 }
-
+#pic_box{
+	height: ;
+}
+.news_box{
+	position:absolute;
+	top:73%;
+	display:none;
+}
 .news_box>div{
 	margin-top:10px;
 }
@@ -309,6 +317,4 @@
 	border:0;
 	margin-top:57px;
 	margin:0 auto;
-	
 }
-
