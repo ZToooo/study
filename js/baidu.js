@@ -1,10 +1,37 @@
 $(document).ready(function(){
-		/*点击打开后台切换页面*/
-	$("#logo_open").click(function(){
-		$(".middle_box").css("display","none");
-		$(".news_box").css("display","block");
-	});
 	
+	/*点击打开后台切换页面*/
+	$("#logo_open").click(function(){
+		var logo_open_value=$(this).html();
+		//console.log(logo_open_value);
+		if(logo_open_value=="打开后台"){
+			$(".middle_box").css("display","none");
+			$(".news_box").css("display","block");
+			$(this).html("关闭后台");
+		}else if(logo_open_value=="关闭后台"){
+			//console.log("点了关闭后台就要还原回去了");
+			$(".middle_box").css("display","block");
+			$(".news_box").css("display","none");
+			$(this).html("打开后台");
+		}
+	});
+	/*提交后台编辑内容*/
+	$("#onload").click(function(){
+		$.ajax({
+			type:"GET",
+			url:"../server/baidu.py",
+			async:true,
+			dataType:"json",
+			data:{
+				"title":$("#news_title").html(),
+				"text":$("#news_text").html(),
+				"p1":$("#p1").attr("src"),
+				"p2":$("#p2").attr("src"),
+				"p3":$("#p3").attr("src")
+			}
+		});
+	})
+
 	/*克隆添加html*/
 	newBOx();
 
