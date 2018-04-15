@@ -284,7 +284,16 @@
 	font-family: "微软雅黑";
 }
 #pic_box{
-	height: ;
+	height: 50px;
+	width: 72%;
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+.pic_group{
+	height:56px;
+	width: 56px;
+	margin-right: 15px;
+	border:1px solid #f8f8f8;
 }
 .news_box{
 	position:absolute;

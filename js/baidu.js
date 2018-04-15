@@ -15,6 +15,13 @@ $(document).ready(function(){
 			$(this).html("打开后台");
 		}
 	});
+	
+	/*加载全路径*/
+	$("#load_file").change(function(){
+		$("#em").text($("#load_file").val());
+	});
+	
+	
 	/*提交后台编辑内容*/
 	$("#onload").click(function(){
 		$.ajax({
