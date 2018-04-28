@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	debugger
+	//debugger
 	
 	/*点击打开后台切换页面*/
 	$("#logo_open").click(function(){
@@ -29,7 +29,7 @@ $(document).ready(function(){
 	$("#load_file").change(function(e){		
 		debugger
 		//获取文件
-		if(p1.src=""){
+		if(p1.src=" "){
 			var P_url=this.files[0];
 			//判断是否是图片
 			if(P_url.type.indexOf("image")==0){
@@ -42,48 +42,20 @@ $(document).ready(function(){
 					p1[0].src=resl;
 				}
 			}
-		}else if(p2.src="")(
-			var P_url=this.files[0];
-			//判断是否是图片
-			if(P_url.type.indexOf("image")==0){
-				var reader=new FileReader();
-				if(p2[0].src){
-					//读取图片文件
-					reader.readAsDataURL(P_url);
-					var resl = reader.result;
-					//resl=resl.substring(5,resl.length)
-					p2[0].src=resl;
-				}
-			}
-		)else if(p3.src="")(
-			var P_url=this.files[0];
-			//判断是否是图片
-			if(P_url.type.indexOf("image")==0){
-				var reader=new FileReader();
-				if(p3[0].src){
-					//读取图片文件
-					reader.readAsDataURL(P_url);
-					var resl = reader.result;
-					//resl=resl.substring(5,resl.length)
-					p3[0].src=resl;
-				}
-			}
-		)
+		}
 	});
 	
 	/*提交后台编辑内容*/
 	$("#onload").click(function(){
 		$.ajax({
 			type:"GET",
-			url:"../server/baidu.py",
+			url:"../server/",
 			async:true,
 			dataType:"json",
 			data:{
 				"title":$("#news_title").html(),
-				"text":$("#news_text").html(),
-				"p1":$("#p1").attr("src"),
-				"p2":$("#p2").attr("src"),
-				"p3":$("#p3").attr("src")
+				"type":$("select").html(),
+				"pic":$("#p1").attr("src")
 			}
 		});
 	})
@@ -99,7 +71,7 @@ $(document).ready(function(){
 		/*添加ajax请求*/
 		$.ajax({
 			type:"GET",
-			url:"../server/baidu.py",
+			url:"../server/getdata",
 			dataType:"json",
 			data:{
 				"id":$(this).find('i').attr('id')
@@ -117,8 +89,6 @@ $(document).ready(function(){
 		var $title=$("<div></div>").addClass("new_title").appendTo($list);
 		var $pic=$("<div></div>").addClass("new_pic").appendTo($list);
 		var $p1=$("<div></div>").addClass("p1").appendTo($pic);
-		var $p2=$("<div></div>").addClass("p2").appendTo($pic);
-		var $p3=$("<div></div>").addClass("p3").appendTo($pic);
 		var $inscribe=$("<div></div>").addClass("new_Inscribe").appendTo($list);
 		var $inscribe_title=$("<div></div>").addClass("new_Inscribe_info title").appendTo($inscribe);
 		var $inscribe_time=$("<div></div>").addClass("new_Inscribe_info time").appendTo($inscribe);
