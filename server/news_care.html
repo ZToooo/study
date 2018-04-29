@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/baidu.css" />
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="middle_box">
+			<div class="new_box">
+				<div class="new_title">这是关注页面</div>
+				<div class="new_pic">
+					<div id="p1"></div>
+					<div id="p2"></div>
+					<div id="p3"></div>
+				</div>
+				<div class="new_Inscribe">
+					<div class="new_Inscribe_info title">说车话车</div>
+			        <div class="new_Inscribe_info type"></div>
+					<div class="new_Inscribe_info time">03-31</div>
+				</div>
+				<div class="new_line"></div>
+			</div>
+		</div>
+
+	</body>
+	<!--<script type="text/javascript">
+		//debugger
+		while(action()) {
+			newBOx();
+		}
+		
+		//判断高度
+		function action() {
+			var windowHeight = window.innerHeight;
+			var frameHeight = $(".middle_box").height();
+			return(windowHeight > frameHeight) ? true : false;
+		};
+
+		//加载框架方法
+		function newBOx() {
+			var $lists = $(".middle_box");
+			/*先清空，再加载 */
+			//$($lists).empty();
+			var $list = $("<div></div>").addClass("new_box").prependTo($lists);
+			var $title = $("<div></div>").addClass("new_title").appendTo($list);
+			var $pic = $("<div></div>").addClass("new_pic").appendTo($list);
+			var $p1 = $("<div></div>").addClass("p1").appendTo($pic);
+			var $inscribe = $("<div></div>").addClass("new_Inscribe").appendTo($list);
+			var $inscribe_title = $("<div></div>").addClass("new_Inscribe_info title").appendTo($inscribe);
+			var $inscribe_time = $("<div></div>").addClass("new_Inscribe_info time").appendTo($inscribe);
+			var $line = $("<div></div>").addClass("new_line").appendTo($list);
+
+		}
+	</script>-->
+
+</html>
