@@ -236,6 +236,11 @@
 	color:#555;
 	text-align: left;
 }
+#new_text,#book_text{
+	height: 4rem;
+	margin-top: -3rem;
+	border:0;
+}
 .new_pic{
 	height:65px ;
 	width: 100%;
@@ -265,7 +270,7 @@
 	color:#a19d9d;
 }
 .new_Inscribe_info{
-	width: 26%;
+	width: 5rem;
 	height: 19px;
 	font-size:16px;
 	color:#a19d9d;

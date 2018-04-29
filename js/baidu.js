@@ -17,6 +17,9 @@ $(document).ready(function(){
 		}
 	});
 	
+	//判断选择的新闻类型是小说的话，就多滑动出一个框
+	
+	
 	/*加载全路径*/
 	$("#load_file").change(function(){
 		$("#em").text($("#load_file").val());
@@ -27,7 +30,7 @@ $(document).ready(function(){
 	var p2=$("#pic2");
 	var p3=$("#pic3");
 	$("#load_file").change(function(e){		
-		debugger
+		//debugger
 		//获取文件
 		if(p1.src=" "){
 			var P_url=this.files[0];
@@ -60,38 +63,9 @@ $(document).ready(function(){
 		});
 	})
 
-	/*克隆添加html*/
-	newBOx();
-
 	/*点击按钮给a标签修改属性值*/
-	$("a.nav_box").click(function(){
-		$("a.nav_box").attr("id","");
-		$(this).attr("id","select");
-		
-		/*添加ajax请求*/
-		$.ajax({
-			type:"GET",
-			url:"../server/getdata",
-			dataType:"json",
-			data:{
-				"id":$(this).find('i').attr('id')
-			},
-			async:true
-		});
+	$(".nav_box").click(function(){
+		var path="server/news_"+$(this).attr("name")+".html";
+		$("iframe.middle_box").attr("src",path);
 	});
 });
-
-	function newBOx(){
-		var $lists=$(".middle_box");
-		/*先清空，再加载 */
-		$($lists).empty();
-		var $list=$("<div></div>").addClass("new_box").prependTo($lists);
-		var $title=$("<div></div>").addClass("new_title").appendTo($list);
-		var $pic=$("<div></div>").addClass("new_pic").appendTo($list);
-		var $p1=$("<div></div>").addClass("p1").appendTo($pic);
-		var $inscribe=$("<div></div>").addClass("new_Inscribe").appendTo($list);
-		var $inscribe_title=$("<div></div>").addClass("new_Inscribe_info title").appendTo($inscribe);
-		var $inscribe_time=$("<div></div>").addClass("new_Inscribe_info time").appendTo($inscribe);
-		var $line=$("<div></div>").addClass("new_line").appendTo($list);
-
-	}
