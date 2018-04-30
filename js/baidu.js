@@ -50,15 +50,16 @@ $(document).ready(function(){
 	
 	/*提交后台编辑内容*/
 	$("#onload").click(function(){
+		//debugger
 		$.ajax({
 			type:"GET",
-			url:"../server/",
+			url:"./server/baidu_node.js",
 			async:true,
 			dataType:"json",
 			data:{
-				"title":$("#news_title").html(),
-				"type":$("select").html(),
-				"pic":$("#p1").attr("src")
+				"title":$("#news_title").val(),
+				"type":$("select").val(),
+				"pic":$(".pic_group").attr("src")
 			}
 		});
 	})
