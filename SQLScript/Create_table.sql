@@ -1,0 +1,11 @@
+--创建新闻数据表
+USE NEWS GO;
+
+CREATE TABLE NEWS_INFO(
+	'new_id' INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	'new_title' VARCHAR(100) NOT NULL,
+	'new_type' VARCHAR(100) NOT NULL,
+	'new_pic' TEXT NOT NULL,
+	'new_date' DATE,
+	PRIMARY KEY(new_id)
+);

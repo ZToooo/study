@@ -33,11 +33,11 @@ http.createServer(function(req,res){
 				host:'192.168.229.129',
 				user:'root',
 				password:'Diorhomme2005!',
-				database:'news_infomation'
+				database:'NEWS'
 			});
 			connection.connect();
-			var sqlcmd="insert into news_tables (news_title,news_typt,news_pic) values (?,?,?)";
-			var sqlparams=[post.title,post.type,post.pic];
+			var sqlcmd="insert into NEWS_INFO (new_title,new_type,new_pic,new_date) values (?,?,?,?)";
+			var sqlparams=[post.title,post.type,post.pic,date()];
 			
 			connection.query(sqlcmd,sqlparams,function(err,result){
 				if(err){

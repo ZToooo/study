@@ -1,0 +1,3 @@
+--创建新闻数据库
+
+CREATE DATABASE NEWS;
