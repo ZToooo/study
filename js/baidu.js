@@ -51,17 +51,26 @@ $(document).ready(function(){
 	/*提交后台编辑内容*/
 	$("#onload").click(function(){
 		//debugger
-		$.ajax({
-			type:"GET",
-			url:"./server/baidu_node.js",
-			async:true,
-			dataType:"json",
-			data:{
-				"title":$("#news_title").val(),
-				"type":$("select").val(),
-				"pic":$(".pic_group").attr("src")
-			}
-		});
+//		$.ajax({
+//			type:"GET",
+//			url:"./server/baidu_node.js",
+//			async:true,
+//			dataType:"json",
+//			data:{
+//				"new_title":$("#news_title").val(),
+//				"new_type":$("select").val(),
+//				"new_pic":$(".pic_group").attr("src")
+//			},
+//			success:function(data){
+//				alert('提交成功');
+//				ret=jQuery.parseJSON(data)
+//				console.log('Success'+ret.msg)
+//			},
+//			error:function(xhr,status,error){
+//				console.log('Error:'+error.Message+"  "+status)
+//			}
+//		});
+		$.GET('127.0.0.1/server/baidu_node.js')
 	})
 
 	/*点击按钮给a标签修改属性值*/
